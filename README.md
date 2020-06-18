@@ -1,16 +1,11 @@
 # Climapp
 
-Oi! Seguem as instruções de uso. Este protótipo foi feito em Vue 2, 
-portanto também pode ser gerenciado via UI (:
+Oi! Seguem as instruções de uso. Este protótipo foi feito em Vue 2, usando a 
+Open Weather Map API e SCSS (:
 
 ## Setup do Projeto:
 ```
 npm install
-```
-
-### Gerenciamento por GUI
-```
-vue ui
 ```
 
 ### Modo desenvolvimento
@@ -28,5 +23,3 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
