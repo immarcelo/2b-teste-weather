@@ -1,0 +1,115 @@
+// Definições gerais da aplicação
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+$wrapperWidth: 680px;
+$easeInOutQuad: cubic-bezier(0.45, 0, 0.55, 1);
+
+
+
+:root {  
+	--color-bg: #264653;
+    --color-cool: #2A9D8F;
+    --color-yellow: #E9C46A;
+    --color-orange: #F4A261;
+    --color-orangeRed: #E76F51; 
+} 
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+}
+
+::-moz-selection { background: var(--color-cool); }
+::selection { background: var(--color-cool); }
+
+
+body {
+	background: var(--color-bg);
+	color:#fff;
+	font-family: Inter, sans-serif;
+}
+
+.wrapper {
+	width: 90%; 
+	max-width: $wrapperWidth;
+	margin: auto; 
+}
+
+.sprite-container {
+	visibility: hidden;
+	height: 0;
+}
+
+.app-header { 
+	text-align: center;
+	top: 0; left: 0; right: 0;
+	z-index: 10;
+	width: 90%; 
+	margin: 20vh auto 32px auto;
+	font-weight: 700;
+	font-size: 16px;
+	color: var(--color-cool); 
+	@include md {
+		margin: auto auto 32px auto; 
+	}
+	 
+	svg {  
+		height: 30vh; 
+		max-height: 200px; 
+	} 
+	
+}
+
+.screen {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center; 
+	align-items: center;
+	 
+	@include md { 
+		min-height: 100vh; 
+	}
+	
+}
+
+.pan-container {
+	overflow: hidden;
+}
+.pan-inner {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start; 
+	width: 100vw; 
+	transition: transform .5s $easeInOutQuad;
+	&.is_result {
+		transform: translateX(-100vw);
+	}
+}
+.pan-section {
+	flex:0 0 100%;
+	width: 100vw;
+}
+
+
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
+
+.button {
+	margin-top: 32px;
+	padding: .8em 1em; 
+	background: none;
+	border:1px solid ;
+    color:var(--color-cool);   
+	font-size: 1rem;
+	transition: all .2s $easeInOutQuad; 
+	&:hover, &:active, &:focus {
+		outline: 0;
+		background: var(--color-cool);
+		border-color: transparent;
+		color: #fff;
+	}     
+}

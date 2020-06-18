@@ -1,0 +1,48 @@
+.loading {
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(38, 70, 83, .8); 
+    &.error-message {
+        background-color: rgba(38, 70, 83, .95);
+    }
+}
+
+@keyframes LOADING_SUN {
+    50% {
+        fill: var(--color-yellow)
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-icon {
+    height: 120px;
+    fill: var(--color-cool);
+    animation: LOADING_SUN 2s $easeInOutQuad infinite;
+}
+
+
+
+.error-message{ 
+	text-align: center;
+	font-weight: 300;
+	font-size: 1.2rem;
+
+	svg {
+		display:block;
+		margin: 24px auto 0 auto;
+		height: 90px;
+	}
+	.search-button {
+        width: auto;
+        color: var(--color-yellow);
+	}
+}

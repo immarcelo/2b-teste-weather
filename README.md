@@ -1,21 +1,29 @@
-# climapp
+# Climapp
 
-## Project setup
+Oi! Seguem as instruções de uso. Este protótipo foi feito em Vue 2, 
+portanto também pode ser gerenciado via UI (:
+
+## Setup do Projeto:
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Gerenciamento por GUI
+```
+vue ui
+```
+
+### Modo desenvolvimento
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Modo produção
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Lints e fixes
 ```
 npm run lint
 ```

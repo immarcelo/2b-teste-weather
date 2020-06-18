@@ -1,0 +1,151 @@
+.result { 
+   width: 100%;
+   text-align: center;
+   padding: 48px 5%;
+   @include sm {
+       width: auto;
+   } 
+}
+
+
+.result-city {
+    color: var(--color-cool);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-size: calc(1.5rem + 2vh);
+    letter-spacing: -0.05em;
+    @include sm {
+        font-size: 2.4rem;
+        font-size: calc(2.4rem + 2vh);
+    }
+}
+.result-city__country {
+    font-size: 0.5em;
+    display: inline-block; 
+    letter-spacing: 0;
+}
+.result-date { 
+    color: var(--color-cool);
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    text-transform: capitalize;
+    @include sm {
+        font-size: 1.2rem;
+    }
+}
+.result-icon {
+    position: relative;
+    margin: 24px auto;
+    width: 80px; height: 80px;
+    background: var(--color-yellow);
+    border-radius: 50%;
+    img {
+        position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin:auto;
+        width: 100%;
+        max-width: 100px;
+    }
+    @include sm {
+        width: 120px; height: 120px;
+        margin: 48px auto;
+    }
+} 
+.result-temperature {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; 
+    align-items: flex-end;
+    margin-bottom: 1.5em; 
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid var(--color-cool);
+    color: var(--color-yellow);
+    font-size: 1.2rem;
+    font-weight: 300; 
+    @include sm {
+        flex-flow: row nowrap;
+    }
+}
+.result-temperature__item {
+    margin: 24px 0 0; 
+    font-size: 1.8em; 
+    @include xs {
+        order:1;
+    }
+    @include sm { 
+        margin-bottom: 0;
+    }
+}
+.result-temperature__item__display {
+    line-height: 1;
+    font-size: 1em;
+}
+.result-temperature__item__label {
+    margin-bottom: 0.3em;
+    font-size: .4em;
+}
+
+.result-temperature__item--current {
+    font-size: 2.8em;
+    @include sm {
+        padding: 0 1em;
+        font-size: 4em;
+        font-size: calc(4em + 2vh);
+    } 
+    .result-temperature__item__label {
+        margin-bottom: 0; 
+        font-size: 0.2em;
+    }
+    @include xs {
+        order:0;
+        width: 100%; 
+    }
+    
+}
+
+.result-extra {
+    margin: 24px auto auto; 
+    @include sm {
+        width: 33%;
+        margin: 24px auto;
+    }
+}
+.result-extra__item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 8px auto;
+    color: var(--color-yellow);
+    font-weight: 300;
+}
+
+.button-backHome {
+    position: relative;
+    margin: 0 auto 48px auto;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-cool);
+    color: #fff;   
+    transition: all .2s $easeInOutQuad;
+    transform: scale(1);
+    svg {
+        position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin:auto;
+        height: 40%;
+    }
+    &:hover {
+        transform: scale(1.1);
+        background-color: var(--color-orangeRed);
+    }
+    &:active {
+        transform: scale(1);
+        background-color: var(--color-orangeRed);
+    }
+    &:focus {
+       outline: none;
+    }
+    @include sm {
+        margin: calc(2.4rem + 2vh) auto;
+    }
+}

@@ -1,0 +1,113 @@
+
+
+.search {
+    width: 90%; 
+    margin: auto;
+    text-align: center;
+    @include sm {
+        width: 100%;
+    }
+
+    ::-webkit-placeholder { 
+        color: currentColor;
+        opacity: 0.72;
+    }
+    ::placeholder {
+        color: currentColor;
+        opacity: 0.5;
+    }
+    ::-moz-placeholder {
+        color: currentColor;
+        opacity: 0.7;
+    }
+}
+
+.input-wrapper {
+    position: relative; 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; 
+    color: var(--color-yellow);
+    border:1px solid ;
+    font-size: 1rem;
+    @include sm {
+        font-size: 2rem;
+        border:2px solid ;
+    }
+} 
+
+.search-input {
+    width: 100%;
+    display:block;
+    width: 100%;
+    flex-shrink: 1;
+    padding: .8em 1em; 
+    border:0;
+    background: transparent;
+    color: currentColor;
+    font-weight: 400; 
+    transition: all .2s $easeInOutQuad;
+    &:focus {
+        outline: none;  
+    }
+    @include sm {
+        padding: .5em .5em; 
+    }
+}
+.search-location {
+    flex-shrink: 0;
+    padding: 0 .5em;
+    color: currentColor;
+    transition: color .2s $easeInOutQuad;
+    svg {
+        height: 1em;
+    }
+    &:hover {
+        color: var(--color-orange);
+    }
+}
+
+.search-location__label {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+
+.search-button {   
+    width: 3em;
+    flex-shrink: 0;
+    background: none;
+    color:var(--color-cool);   
+    font-size: 1rem;
+    transition: all .2s $easeInOutQuad;
+    opacity: 0.2;
+    cursor: default;
+    &:not([disabled]) { 
+        opacity: 1;
+        cursor: pointer;
+        &:hover, &:active, &:focus {
+            outline: 0;
+            background: var(--color-cool);
+            border-color: transparent;
+            color: #fff;
+        }     
+    }
+    svg {
+        width: 70%;
+        height: auto;
+        transition: transform .2s $easeInOutQuad;
+    } 
+    &:focus {
+        outline: 0;
+    }
+    &:active {
+        svg {
+            transform: scale(.9); 
+        }
+    }
+    
+    @include sm{
+        width: 4em;
+    }
+   
+}
